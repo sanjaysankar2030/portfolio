@@ -83,6 +83,7 @@ export default function Home() {
           {[
             { label: "Intro", id: "intro" },
             { label: "About", id: "about" },
+            { label:"Tech Stack",id:"tech_stack"},
             { label: "Projects", id: "projects" },
             { label: "Experience", id: "experience" },
             { label: "Contact", id: "contact" }
@@ -237,16 +238,16 @@ export default function Home() {
                 About me
               </h2>
               <p>
-                a backend & ML engineer who builds{" "}
+                a backend & systems engineer who likes to build {" "}
                 <a href="https://en.wikipedia.org/wiki/Scalability" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">
                   scalable systems
                 </a>{" "}
-                and trains models that actually ship — not just notebooks that sit on a drive.
+                and explore different paradigms in programming .
               </p>
               <p>
                 currently crafting a{" "}
-                <a href="https://go.dev" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">
-                  lightweight ML library in Go
+                <a href="https://github.com/sanjaysankar2030/JetStream" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">
+                  distributed file system from scratch in golang
                 </a>
                 , because understanding something deeply means building it from scratch.
               </p>
@@ -255,17 +256,19 @@ export default function Home() {
                 <a href="https://drive.google.com/file/d/1oqjKdbVtGpeqLFkaaNdL05044bJcgRJ5/view" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-black dark:hover:text-white transition-colors">
                   internships and campus placements
                 </a>
-                . if you're building something ambitious, let's talk.
+                . if you&apos;re building something ambitious I will be glad to be a part of it .
               </p>
             </div>
             <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-8" />
             {/* Tech Stack Section */}
-            <div className="mb-16 w-full text-left">
+                        {/* <div id="projects" className="mt-16 mb-16 w-full text-left scroll-mt-28"> */}
+
+            <div id="tech_stack" className="mt-16 mb-16 w-full text-left scroll-mt-28">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
                 Tech Stack
               </h2>
               <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-                i&apos;m a generalist at heart who likes to experiment with programs , but here&apos;s the core stack i&apos;ve spent the most my time with .
+                I&apos;m a generalist at heart who likes to experiment with programs, but here&apos;s the core stack i have spent the most my time with .
               </p>
               <TechStack />
             </div>
@@ -279,50 +282,37 @@ export default function Home() {
 
                   title="Projects Spotlight"
                   role="Software Development"
-                  collapsible={true}
-                  collapsedHeight="max-h-80" // Increased height so the first few are visible
                 >
                   <div className="space-y-8 mt-4">
 
                     <div className="space-y-1">
-                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Java BPE LLM Tokenization Engine</h3>
-                      <p className="text-sm text-gray-400 dark:text-gray-500">Core Java</p>
-                      <p className="text-gray-600 dark:text-gray-400">Dependency-free Java library implementing Byte Pair Encoding and WordPiece tokenization algorithms used in modern LLMs.</p>
-                      <a href="https://sanjaysankar.framer.website/product/java-bpe" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
+                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">LLM Gateway Backend </h3>
+                      <p className="text-sm text-gray-400 dark:text-gray-500">Jakarta EE , MySQL</p>
+                      <p className="text-gray-600 dark:text-gray-400">Implemented a LLM middleware using Jakarta EE for with custom Embedded Tokenizer Engine for token opti-
+mization, per-client rate limiting via token bucket, automatic provider failover via MySQL.</p>
+                      <a href="https://github.com/sanjaysankar2030/phantom" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
                     </div>
 
                     <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" />
                     <div className="space-y-1">
-                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Go-ML Framework</h3>
+                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Distributed File System with Content-Addressed Storage</h3>
                       <p className="text-sm text-gray-400 dark:text-gray-500">Golang</p>
-                      <p className="text-gray-600 dark:text-gray-400">Systems-level ML framework ported from C-based nn.h architecture to Go — built to understand model internals from the ground up.</p>
-                      <a href="https://sanjaysankar.framer.website/product/go-ml" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
+                      <p className="text-gray-600 dark:text-gray-400">Serverless peer-to-peer file system in Go . Implements SHA-1 content-addressed storage (CAS) for collision-proof
+file layout, AES-256-CTR encryption for in-transit data, and gossip-based replication across all connected peers
+via TCP.</p>
+                      <a href="https://github.com/sanjaysankar2030/JetStream" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
                     </div>
                     <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" />
 
                     <div className="space-y-1">
-                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Smart Clinic Management System</h3>
+                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Fleet Managment and Route Optimization Engine</h3>
                       <p className="text-sm text-gray-400 dark:text-gray-500">Spring (Java)</p>
-                      <p className="text-gray-600 dark:text-gray-400">Full-stack web app handling medical appointments, patient records, and staff scheduling for clinic operations.</p>
-                      <a href="https://sanjaysankar.framer.website/product/healthcare" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
+                      <p className="text-gray-600 dark:text-gray-400">Route optimization engine for multi-stop delivery logistics using Greedy TSP, 2-opt local search, and Genetic
+Algorithm variants; benchmarked algorithms across 5–20 deliveries. Integrated GraphHopper API with Haversine
+fallback and circuit-breaker resilience.</p>
+                      <a href="https://github.com/sanjaysankar2030/Fleet-Management-and-Route-Optimization-Engine/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
                     </div>
-                    <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" />
-
-                    <div className="space-y-1">
-                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Retail-Core: Microservices API Suite</h3>
-                      <p className="text-sm text-gray-400 dark:text-gray-500">Spring (Java)</p>
-                      <p className="text-gray-600 dark:text-gray-400">RESTful backend suite covering inventory tracking, order processing, and transactional data management at scale.</p>
-                      <a href="https://sanjaysankar.framer.website/product/retail-api" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
-                    </div>
-                    <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" />
-
-                    <div className="space-y-1">
-                      <h3 className="text-gray-900 dark:text-gray-100 font-medium">Pet Care Scheduler</h3>
-                      <p className="text-sm text-gray-400 dark:text-gray-500">Core Java</p>
-                      <p className="text-gray-600 dark:text-gray-400">Modular console app for managing pet services, built as a deep-dive into advanced Core Java design patterns.</p>
-                      <a href="https://sanjaysankar.framer.website/product/hugo-vicario" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-xs font-medium text-black dark:text-white underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300">View Details</a>
-                    </div>
-                    <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" />
+                    {/* <hr className="w-full border-t border-gray-200 dark:border-gray-800 my-5" /> */}
 
                   </div>
                 </ExperienceItem>
@@ -438,7 +428,7 @@ export default function Home() {
 
                   View my professional experience and technical background in my{" "}
                   <a
-                    href="https://drive.google.com/file/d/1oqjKdbVtGpeqLFkaaNdL05044bJcgRJ5/view"
+                    href="https://drive.google.com/file/d/1MDYRVpdvJEl5X34zEaPWg3zs8cKfzOI1/view?usp=sharing"
                     target="_blank"
                     rel="s noreferrer"
                     className="text-black dark:text-white underline underline-offset-4 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
@@ -451,7 +441,7 @@ export default function Home() {
                   <span className="text-foreground/40 mr-3">•</span>
                   Interested in my architectural approach? check out my{" "}
                   <a
-                    href="https://drive.google.com/file/d/1oqjKdbVtGpeqLFkaaNdL05044bJcgRJ5/view"
+                    href="https://drive.google.com/file/d/1MDYRVpdvJEl5X34zEaPWg3zs8cKfzOI1/view?usp=sharing"
                     target="_blank"
                     rel="noopener "
                     className="text-black dark:text-white underline underline-offset-4 hover:text-gray-500 dark:hover:text-gray-400 transition-colors"
@@ -491,7 +481,7 @@ export default function Home() {
               <div className="max-w-2xl space-y-6 text-base leading-relaxed text-gray-600 dark:text-gray-400">
                 <div className="border-l-2 border-gray-300 dark:border-gray-700 pl-4 my-6">
                   <p className="italic text-gray-500 dark:text-gray-400">
-                    "Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make things worse: complexity sells better."
+                    &quot;Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make things worse: complexity sells better.&quot;
                   </p>
                   <span className="block mt-2 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">
                     — Edsger W. Dijkstra
@@ -570,7 +560,7 @@ export default function Home() {
                     <FaXTwitter className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://drive.google.com/file/d/1oqjKdbVtGpeqLFkaaNdL05044bJcgRJ5/view"
+                    href="https://drive.google.com/file/d/1MDYRVpdvJEl5X34zEaPWg3zs8cKfzOI1/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-black dark:hover:text-white transition-colors hover:scale-110"
@@ -607,7 +597,7 @@ export default function Home() {
                   <a href="https://x.com/tremblenull" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title="Twitter/X">
                     <FaXTwitter className="h-5 w-5" />
                   </a>
-                  <a href="https://drive.google.com/file/d/1oqjKdbVtGpeqLFkaaNdL05044bJcgRJ5/view" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title="YouTube">
+                  <a href="https://drive.google.com/file/d/1MDYRVpdvJEl5X34zEaPWg3zs8cKfzOI1/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white transition-colors" title="YouTube">
                     <Youtube className="h-5 w-5" />
                   </a>
                   <button
