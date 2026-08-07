@@ -576,7 +576,7 @@ fallback and circuit-breaker resilience.</p>
                     <QrCode className="h-5 w-5" />
                   </button> */}
                   <a
-                    href="https://leetcode.com/u/Sanjay___/"
+                    href="https://neetcode.io/user/CoolWarg229"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-black dark:hover:text-white transition-colors hover:scale-110"
